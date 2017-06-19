@@ -11,7 +11,7 @@ function inOrOut(response){
         nameAdd.toLowerCase()
         perName.push(nameAdd);
       }else if (inter == 'drop') {
-        var nameRemove = prompt("Please type the name you want to add")
+        var nameRemove = prompt("Please type the name you want to drop")
         nameRemove.toLowerCase()
         if(perName.includes(nameRemove)){
           perName.pop(nameRemove);
