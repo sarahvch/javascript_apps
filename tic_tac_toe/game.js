@@ -9,26 +9,6 @@ var boxEight = document.querySelector('#eight')
 var boxNine = document.querySelector('#nine')
 var whoWon = document.querySelectorAll('td')
 
-// random color generator
-// var random = '#' + (function co(lor){return (lor +=
-//   [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
-//   && (lor.length == 6) ?  lor : co(lor); })('');
-
-
-//whoWon
-var a = [0, 1, 2]
-var b = [0, 4, 8]
-var c = [0, 2, 6]
-
-var d = [2, 5, 8]
-var e = [6, 7, 8]
-
-var f = [1, 4, 7]
-var g = [3, 4, 5]
-
-waysToWin = [a, b, c, d, e, f, g]
-
-
 
 //mouse over
 boxOne.addEventListener('mouseover',function(){
@@ -248,10 +228,5 @@ function clearTable() {
   }
 }
 
-whoWon.addEventListener('click', function(){
-  if(whoWon[0].textContent === "X"){
-    alert("X has Won!")
-  }
-})
 
 restart.addEventListener('click', clearTable)
