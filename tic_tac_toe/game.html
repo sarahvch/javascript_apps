@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <meta charset="utf-8">
+    <style>
+    td {
+      height:150px;
+      width:150px;
+      border: 7px solid #eee;
+    }
+      .gametable {
+        margin: auto;
+      }
+      #one {
+        background-color: #1E91D6;
+      }
+      #two {
+        background-color: #B8336A;
+      }
+      #three{
+        background-color: #8FC93A;
+      }
+      #four{
+        background-color: #E4CC37;
+      }
+      #five{
+        background-color: #009933;
+      }
+      #six{
+        background-color: #E18335;
+      }
+      #seven{
+        background-color: #78D5D7;
+      }
+      #eight{
+        background-color: #037971;
+      }
+      #nine{
+        background-color: #274690;
+      }
+    </style>
+    <title></title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="jumbotron">
+        <h1 id="cow">Tic Tac Toe</h1>
+        <p>A Simple Game for Simple Times</p>
+        <table class="gametable">
+          <tr>
+            <td id="one"></td>
+            <td id="two"></td>
+            <td id="three"></td>
+          </tr>
+          <tr>
+            <td id="four"></td>
+            <td id="five"></td>
+            <td id="six"></td>
+          </tr>
+          <tr>
+            <td id="seven"></td>
+            <td id="eight"></td>
+            <td id="nine"></td>
+          </tr>
+        </table>
+        <p><a class="btn btn-primary btn-lg" value="Refresh Page" role="button" onClick="history.go(0)">Start Over</a></p>
+      </div>
+    </div>
+  </body>
+  <script src="game.js">
+
+  </script>
+</html>
