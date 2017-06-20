@@ -7,35 +7,74 @@ var boxSix = document.querySelector('#six')
 var boxSeven = document.querySelector('#seven')
 var boxEight = document.querySelector('#eight')
 var boxNine = document.querySelector('#nine')
+var whoWon = document.querySelectorAll('td')
+
+// random color generator
+// var random = '#' + (function co(lor){return (lor +=
+//   [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+//   && (lor.length == 6) ?  lor : co(lor); })('');
+
+
+//whoWon
+var a = [0, 1, 2]
+var b = [0, 4, 8]
+var c = [0, 2, 6]
+
+var d = [2, 5, 8]
+var e = [6, 7, 8]
+
+var f = [1, 4, 7]
+var g = [3, 4, 5]
+
+waysToWin = [a, b, c, d, e, f, g]
+
 
 
 //mouse over
 boxOne.addEventListener('mouseover',function(){
-  boxOne.style.backgroundColor = '#80e5ff';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxTwo.addEventListener('mouseover',function(){
-  boxTwo.style.backgroundColor = '#ACACDE';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxThree.addEventListener('mouseover',function(){
-  boxThree.style.backgroundColor = '#99ffbb';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxFour.addEventListener('mouseover',function(){
-  boxFour.style.backgroundColor = '#ffff00';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxFive.addEventListener('mouseover',function(){
-  boxFive.style.backgroundColor = '#00e64d';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxSix.addEventListener('mouseover',function(){
-  boxSix.style.backgroundColor = '#ffcc00';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxSeven.addEventListener('mouseover',function(){
-  boxSeven.style.backgroundColor = '#b3ffd9';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxEight.addEventListener('mouseover',function(){
-  boxEight.style.backgroundColor = '#66e0ff';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 boxNine.addEventListener('mouseover',function(){
-  boxNine.style.backgroundColor = '#9933ff';
+  this.style.backgroundColor = '#' + (function co(lor){return (lor +=
+    [0,1,2,3,4,5,6,7,8,9,'a','b','c','d','e','f'][Math.floor(Math.random()*16)])
+    && (lor.length == 6) ?  lor : co(lor); })('');
 })
 
 
@@ -69,137 +108,131 @@ boxNine.addEventListener('mouseout', function(){
   boxNine.style.backgroundColor = '#274690';
 })
 
-//clicked on
+//click
 boxOne.addEventListener('click', function(){
-  this.textContent = "X";
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
 
 boxTwo.addEventListener('click', function(){
-  this.textContent = "X";
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
 
 boxThree.addEventListener('click', function(){
-  this.textContent = "X";
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
 
 boxFour.addEventListener('click', function(){
-  this.textContent = "X";
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
-})
-boxFive.addEventListener('click', function(){
-  this.textContent = "X";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxSix.addEventListener('click', function(){
-  this.textContent = "X";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxSeven.addEventListener('click', function(){
-  this.textContent = "X";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxEight.addEventListener('click', function(){
-  this.textContent = "X";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxNine.addEventListener('click', function(){
-  this.textContent = "X";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
 
-//double click
-boxOne.addEventListener('dblclick', function(){
-  this.textContent = "O";
+boxFive.addEventListener('click', function(){
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
-boxTwo.addEventListener('dblclick', function(){
-  this.textContent = "O";
+
+boxSix.addEventListener('click', function(){
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
-boxThree.addEventListener('dblclick', function(){
-  this.textContent = "O";
+
+boxSeven.addEventListener('click', function(){
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
-boxFour.addEventListener('dblclick', function(){
-  this.textContent = "O";
+
+boxEight.addEventListener('click', function(){
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
-boxFive.addEventListener('dblclick', function(){
-  this.textContent = "O";
+
+boxNine.addEventListener('click', function(){
   this.style.fontSize = '100px'
   this.style.color = "#eee";
   this.style.textAlign = "center";
   this.style.font = "arial";
-})
-boxSix.addEventListener('dblclick', function(){
-  this.textContent = "O";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxSeven.addEventListener('dblclick', function(){
-  this.textContent = "O";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxEight.addEventListener('dblclick', function(){
-  this.textContent = "O";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
-})
-boxNine.addEventListener('dblclick', function(){
-  this.textContent = "O";
-  this.style.fontSize = '100px'
-  this.style.color = "#eee";
-  this.style.textAlign = "center";
-  this.style.font = "arial";
+  if(this.textContent == ''){
+    this.textContent = 'X';
+  }else if(this.textContent === 'X'){
+    this.textContent = 'O'
+  }else{
+    this.textContent = '';
+  }
 })
 
 //restart
@@ -214,5 +247,11 @@ function clearTable() {
     sqr[i].textContent = '';
   }
 }
+
+whoWon.addEventListener('click', function(){
+  if(whoWon[0].textContent === "X"){
+    alert("X has Won!")
+  }
+})
 
 restart.addEventListener('click', clearTable)
