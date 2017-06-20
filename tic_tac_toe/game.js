@@ -201,3 +201,18 @@ boxNine.addEventListener('dblclick', function(){
   this.style.textAlign = "center";
   this.style.font = "arial";
 })
+
+//restart
+var restart = document.querySelector('#b');
+
+//grab td squares
+var sqr = document.querySelectorAll('td');
+
+//clear
+function clearTable() {
+  for (var i = 0; i < sqr.length; i++) {
+    sqr[i].textContent = '';
+  }
+}
+
+restart.addEventListener('click', clearTable)
