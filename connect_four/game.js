@@ -8,6 +8,8 @@ colSeven = 41
 tog = 2
 
 var tableData = $('.stylish')
+
+//REFACTORING NOTES
 // var topRow = $(".first td a[id]")
 // var topRowID = topRow.map(function (){return this.id});
 // var colIndex = 0
@@ -43,82 +45,54 @@ var tableData = $('.stylish')
 //   tog = tog + 1
 // })
 
-$(tableData.eq(3)).click(function() {
+
+function cols(colNum){
   if(tog%2 == 0){
-    tableData.eq([colThree]).css('background-color','#c2f0f0')
+    tableData.eq([colNum]).css('background-color','#c2f0f0')
   }else{
-    tableData.eq([colThree]).css('background-color','#ff8080')
+    tableData.eq([colNum]).css('background-color','#ff8080')
   }
-  colThree = colThree - 7
-  tog = tog + 1
-})
+}
+
 
 $('#1').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colOne]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colOne]).css('background-color','#ff8080')
-  }
-  colOne = colOne - 7
+  cols(colOne)
   tog = tog + 1
+  colOne = colOne-7
 })
 
 $('#2').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colTwo]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colTwo]).css('background-color','#ff8080')
-  }
-  colTwo = colTwo - 7
+  cols(colTwo)
   tog = tog + 1
+  colTwo = colTwo-7
 })
 
 $('#3').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colThree]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colThree]).css('background-color','#ff8080')
-  }
-  colThree = colThree - 7
+  cols(colThree)
   tog = tog + 1
+  colThree = colThree-7
 })
 
 $('#4').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colFour]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colFour]).css('background-color','#ff8080')
-  }
-  colFour = colFour- 7
+  cols(colFour)
   tog = tog + 1
+  colFour = colFour-7
 })
 
 $('#5').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colFive]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colFive]).css('background-color','#ff8080')
-  }
-  colFive = colFive - 7
+  cols(colFive)
   tog = tog + 1
+  colFive = colFive-7
 })
 
 $('#6').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colSix]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colSix]).css('background-color','#ff8080')
-  }
-  colSix = colSix - 7
+  cols(colSix)
   tog = tog + 1
+  colSix = colSix-7
 })
 
 $('#7').click(function() {
-  if(tog%2 == 0){
-    tableData.eq([colSeven]).css('background-color','#c2f0f0')
-  }else{
-    tableData.eq([colSeven]).css('background-color','#ff8080')
-  }
-  colSeven = colSeven - 7
+  cols(colSeven)
   tog = tog + 1
+  colSeven = colSeven-7
 })
